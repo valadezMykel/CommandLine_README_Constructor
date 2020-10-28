@@ -1,5 +1,5 @@
 
-# Scout
+# Commandline README Creator
 <br />
 
 
@@ -14,17 +14,17 @@
 
 ## About the Project
 
-He is a dog
+Takes user inputs from the command line and out puts a README.md file
 
 
 ## Installation
 
-come meet him
+Clone the repository
 
 
-##Usage
+## Usage
 
-not much
+To create a professional readme for a project
 
 
 ## License
@@ -34,4 +34,4 @@ MIT
 
 ## Contributors
 
-undefined
+Mykel

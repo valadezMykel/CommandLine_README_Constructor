@@ -36,7 +36,7 @@ const promptQuestions = [
     {
         type: "input",
         name: "contributions",
-        message: "How has contributed to your project?"
+        message: "who has contributed to your project?"
     },
 ]
 
@@ -68,7 +68,7 @@ ${answer.description}
 ${answer.installation}
 
 
-##Usage
+## Usage
 
 ${answer.usage}
 
@@ -80,10 +80,11 @@ ${answer.license}
 
 ## Contributors
 
-${answer.contributors}`;
+${answer.contributions}
+`;
 
     console.log(answer)
-    fs.appendFile("README.md", ReadmeTemplate, function(err){
+    fs.writeFile("README.md", ReadmeTemplate, function(err){
         if(err){
             console.log(err);
         }
