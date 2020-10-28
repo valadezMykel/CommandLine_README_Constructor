@@ -1,37 +1,37 @@
 
-    # Scout
-    <br />
+# Scout
+<br />
 
 
-    ## Table of Contents
+## Table of Contents
 
-    * [About the Project](#about-the-project)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributors](#contributors)
-
-
-    ## About the Project
-
-    He is a dog
+* [About the Project](#about-the-project)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributors](#contributors)
 
 
-    ## Installation
+## About the Project
 
-    Come meet him
-
-
-    ##Usage
-
-    Not much
+He is a dog
 
 
-    ## License
+## Installation
 
-    MIT
+Come meet him
 
 
-    ## Contributors
+##Usage
 
-    undefined
+Not much
+
+
+## License
+
+MIT
+
+
+## Contributors
+
+undefined
