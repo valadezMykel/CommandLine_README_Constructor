@@ -19,12 +19,12 @@ He is a dog
 
 ## Installation
 
-Come meet him
+come meet him
 
 
 ##Usage
 
-Not much
+not much
 
 
 ## License

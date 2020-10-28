@@ -45,42 +45,42 @@ const promptQuestions = [
 inq.prompt(promptQuestions).then((answer) => {
 
     const ReadmeTemplate = `
-    # ${answer.title}
-    <br />
+# ${answer.title}
+<br />
 
 
-    ## Table of Contents
+## Table of Contents
 
-    * [About the Project](#about-the-project)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributors](#contributors)
-
-
-    ## About the Project
-
-    ${answer.description}
+* [About the Project](#about-the-project)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributors](#contributors)
 
 
-    ## Installation
+## About the Project
 
-    ${answer.installation}
-
-
-    ##Usage
-
-    ${answer.usage}
+${answer.description}
 
 
-    ## License
+## Installation
 
-    ${answer.license}
+${answer.installation}
 
 
-    ## Contributors
+##Usage
 
-    ${answer.contributors}`;
+${answer.usage}
+
+
+## License
+
+${answer.license}
+
+
+## Contributors
+
+${answer.contributors}`;
 
     console.log(answer)
     fs.appendFile("README.md", ReadmeTemplate, function(err){
