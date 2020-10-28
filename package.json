@@ -1,0 +1,25 @@
+{
+  "name": "commandline_readme_constructor",
+  "version": "1.0.0",
+  "description": "Creates a README based on user input in the commandline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valadezMykel/CommandLine_README_Constructor.git"
+  },
+  "keywords": [
+    "README"
+  ],
+  "author": "Mykel Valadez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valadezMykel/CommandLine_README_Constructor/issues"
+  },
+  "homepage": "https://github.com/valadezMykel/CommandLine_README_Constructor#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
