@@ -1,6 +1,15 @@
 
-# Commandline README Creator
+# scout
 <br />
+
+
+    ## Links 
+    
+    
+For the Repository link click [here](jljlkj)
+
+
+For a link to the deployed project click [here](jljoiolk)
 
 
 ## Table of Contents
@@ -14,24 +23,14 @@
 
 ## About the Project
 
-Takes user inputs from the command line and out puts a README.md file
+ljlshfh
 
 
 ## Installation
 
-Clone the repository
+afadfagflek
 
 
 ## Usage
 
-To create a professional readme for a project
-
-
-## License
-
-MIT
-
-
-## Contributors
-
-Mykel
+lshgoieh

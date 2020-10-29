@@ -4,6 +4,13 @@ THEN a high-quality, professional README.md is generated with the title of my pr
 <br />
 
 
+## Links 
+
+For the Repository link click [here](${answers.repoLink})
+
+For a link to the deployed project click [here](${answers.deployedLink}) 
+
+
 ## Table of Contents
 
 * [About the Project](#about-the-project)

@@ -1,5 +1,4 @@
-const inquirer = require("inquirer");
-
+const templatePieces = require("./templatePeices")
 const inq = require("inquirer");
 const fs = require("fs");
 
@@ -8,6 +7,29 @@ const promptQuestions = [
         type: "input",
         name: "title",
         message: "What is the title of your project?"
+    },
+    {
+        type: "confirm",
+        name: "needRepoLink",
+        message: "Do you have a link to the project repository?"
+    },
+    {
+        type: "input",
+        name: "repoLink",
+        message: "Input your repository link",
+        when: (answers) => answers.needRepoLink === true
+        
+    },
+    {
+        type: "confirm",
+        name: "needDeployedLink",
+        message: "Do you have a link to your deployed project"
+    },
+    {
+        type: "input",
+        name: "deployedLink",
+        message: "Input a link to your deployed project",
+        when: (answers) => answers.needDeployedLink === true
     },
     {
         type: "input",
@@ -42,49 +64,49 @@ const promptQuestions = [
 
 
 
-inq.prompt(promptQuestions).then((answer) => {
+inq.prompt(promptQuestions).then((answers) => {
 
-    const ReadmeTemplate = `
-# ${answer.title}
-<br />
-
-
-## Table of Contents
-
-* [About the Project](#about-the-project)
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributors](#contributors)
+//     const ReadmeTemplate = `
+// # ${answers.title}
+// <br />
 
 
-## About the Project
+// ## Table of Contents
 
-${answer.description}
-
-
-## Installation
-
-${answer.installation}
-
-
-## Usage
-
-${answer.usage}
+// * [About the Project](#about-the-project)
+// * [Installation](#installation)
+// * [Usage](#usage)
+// * [License](#license)
+// * [Contributors](#contributors)
 
 
-## License
+// ## About the Project
 
-${answer.license}
+// ${answers.description}
 
 
-## Contributors
+// ## Installation
 
-${answer.contributions}
-`;
+// ${answers.installation}
 
-    console.log(answer)
-    fs.writeFile("README.md", ReadmeTemplate, function(err){
+
+// ## Usage
+
+// ${answers.usage}
+
+
+// ## License
+
+// ${answer.license}
+
+
+// ## Contributors
+
+// ${answers.contributions}
+// `;
+
+    console.log(answers)
+    fs.writeFile("README.md", templatePieces.templateConstructor(answers), function(err){
         if(err){
             console.log(err);
         }
