@@ -5,13 +5,13 @@ module.exports = {
         const titleSection = `
 # ${answers.title}
 <br />
-
 `;
-        if(answers.needDeployedLink || answers.needRepoLink){
-        var linksSection = `
+        if (answers.needDeployedLink || answers.needRepoLink) {
+            var linksSection = `
 ## Links 
 
-`;}
+`;
+        }
         if (answers.needRepoLink) {
             linksSection += `
 For the Repository link click [here](${answers.repoLink})
@@ -19,7 +19,7 @@ For the Repository link click [here](${answers.repoLink})
 `;
         };
         if (answers.needDeployedLink) {
-            var deployedLinkSection = `
+            linksSection += `
 For a link to the deployed project click [here](${answers.deployedLink})
 
 `;
@@ -40,7 +40,7 @@ For a link to the deployed project click [here](${answers.deployedLink})
             for (const visual of visualsArray) {
                 visuals += (`![placeholder](${visual})
 
-        `);
+`);
             };
         }
         const aboutAndTheRest = `
@@ -58,23 +58,17 @@ ${answers.installation}
 
 ${answers.usage}`;
 
-        if (answers.needRepoLink && answers.needDeployedLink && answers.needVisuals) {
-            return titleSection + linksSection + repoLinkSection + deployedLinkSection + tableOfContents + visuals + aboutAndTheRest;
-        }
-        else if (answers.needRepoLink) {
-            return titleSection + linksSection + repoLinkSection + tableOfContents;
-        }
-        else if (answers.needDeployedLink) {
-            return titleSection + linksSection + deployedLinkSection + tableOfContents;
-        }
-        else {
-            return titleSection + tableOfContentsPlus;
-        }
-
         let resultTOSend = titleSection;
-        if(answers.needRepoLink && answers.needDeployedLink){
-            
-        }
+        if (answers.needRepoLink || answers.needDeployedLink) {
+            resultTOSend += linksSection;
+        };
+        resultTOSend += tableOfContents;
+        if (answers.needVisuals) {
+            resultTOSend += visuals;
+        };
+        resultTOSend += aboutAndTheRest;
+
+        return resultTOSend;
 
     }
 }
