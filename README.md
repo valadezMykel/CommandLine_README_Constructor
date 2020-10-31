@@ -1,15 +1,15 @@
 
-# scout
+# Scout 
 <br />
 
 
-    ## Links 
-    
-    
-For the Repository link click [here](jljlkj)
+## Links 
 
 
-For a link to the deployed project click [here](jljoiolk)
+For the Repository link click [here](jalkghj)
+
+
+For a link to the deployed project click [here](ghaoghoi)
 
 
 ## Table of Contents
@@ -20,17 +20,19 @@ For a link to the deployed project click [here](jljoiolk)
 * [License](#license)
 * [Contributors](#contributors)
 
+![placeholder](https://www.deviantart.com/abd-illustrates/art/DnD-Character-Designs-the-Waywood-Siblings-729594771)
 
+        
 ## About the Project
 
-ljlshfh
+hlkshg
 
 
 ## Installation
 
-afadfagflek
+hhslkg
 
 
 ## Usage
 
-lshgoieh
+khgkshg

@@ -32,6 +32,17 @@ const promptQuestions = [
         when: (answers) => answers.needDeployedLink === true
     },
     {
+        type: "confirm",
+        name: "needVisuals",
+        message: "Do you have any visuals you would like to add?"
+    },
+    {
+        type: "input",
+        name: "visuals",
+        message: "Input the path to each of your visuals, if there is more than 1 visual separate them with one space",
+        when: (answers) => answers.needVisuals === true
+    },
+    {
         type: "input",
         name: "description",
         message: "Describe your project"
@@ -66,52 +77,12 @@ const promptQuestions = [
 
 inq.prompt(promptQuestions).then((answers) => {
 
-//     const ReadmeTemplate = `
-// # ${answers.title}
-// <br />
-
-
-// ## Table of Contents
-
-// * [About the Project](#about-the-project)
-// * [Installation](#installation)
-// * [Usage](#usage)
-// * [License](#license)
-// * [Contributors](#contributors)
-
-
-// ## About the Project
-
-// ${answers.description}
-
-
-// ## Installation
-
-// ${answers.installation}
-
-
-// ## Usage
-
-// ${answers.usage}
-
-
-// ## License
-
-// ${answer.license}
-
-
-// ## Contributors
-
-// ${answers.contributions}
-// `;
-
-    console.log(answers)
     fs.writeFile("README.md", templatePieces.templateConstructor(answers), function(err){
         if(err){
             console.log(err);
         }
         else{
-            console.log("success")
+            console.log("README creation success")
         }
     });
 });
