@@ -1,4 +1,4 @@
-const templatePieces = require("./templatePeices")
+const readmeTemplatePieces = require("./readmeTemplatePieces")
 const inq = require("inquirer");
 const fs = require("fs");
 
@@ -62,9 +62,17 @@ const promptQuestions = [
         name: "license",
         message: "What license does your project use?",
         choices: [
+            "BSD",
             "MIT",
+            "Apache",
             "None",
         ]
+    },
+    {
+        type: "confirm",
+        name: "needLicenseCreated",
+        message: "Would you like a License.txt file added to your project along with the README?",
+        when: (answers) => answers.license != "none"
     },
     {
         type: "input",
@@ -77,7 +85,7 @@ const promptQuestions = [
 
 inq.prompt(promptQuestions).then((answers) => {
 
-    fs.writeFile("README.md", templatePieces.templateConstructor(answers), function(err){
+    fs.writeFile("README.md", readmeTemplatePieces.readmeTemplateConstructor(answers), function(err){
         if(err){
             console.log(err);
         }

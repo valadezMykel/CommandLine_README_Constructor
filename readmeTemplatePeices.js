@@ -1,11 +1,27 @@
 module.exports = {
 
-    templateConstructor: function (answers) {
+    readmeTemplateConstructor: function (answers) {
 
         const titleSection = `
 # ${answers.title}
 <br />
 `;
+        let licenseBadgeSection;
+        switch(answers.license){
+            case "none":
+                licenseBadgeSection =  "";
+                break;
+            case "BSD":
+                licenseBadgeSection = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+                break;
+            case "MIT":
+                licenseBadgeSection ="[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+                break;
+            case "Apache":
+                licenseBadgeSection ="[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+                break;
+        };
+
         if (answers.needDeployedLink || answers.needRepoLink) {
             var linksSection = `
 ## Links 
@@ -56,9 +72,19 @@ ${answers.installation}
 
 ## Usage
 
-${answers.usage}`;
+${answers.usage}
 
-        let resultTOSend = titleSection;
+
+## License
+
+${answer.license}
+
+
+## Contributors
+
+${answer.contributors}`;
+
+        let resultTOSend = titleSection+licenseBadgeSection;
         if (answers.needRepoLink || answers.needDeployedLink) {
             resultTOSend += linksSection;
         };
