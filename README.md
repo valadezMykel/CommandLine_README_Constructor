@@ -1,12 +1,14 @@
 
-# jsljfs
+# scout
 <br />
-
-
+[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 ## Links 
 
 
-For the Repository link click [here](lsjgkljsg)
+For the Repository link click [here](scouts repo)
+
+
+For a link to the deployed project click [here](scouts project)
 
 
 ## Table of Contents
@@ -17,23 +19,33 @@ For the Repository link click [here](lsjgkljsg)
 * [License](#license)
 * [Contributors](#contributors)
 
-![placeholder](sjljgljsgs)
+![placeholder](picture)
 
-![placeholder](jljsdkldl)
+![placeholder](of)
 
-![placeholder](hienv)
+![placeholder](scout)
 
 
 ## About the Project
 
-jflskjf
+he is a dog
 
 
 ## Installation
 
-jljsvlhb
+meet him
 
 
 ## Usage
 
-nvskjdv
+not much
+
+
+## License
+
+BSD
+
+
+## Contributors
+
+undefined

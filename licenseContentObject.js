@@ -1,7 +1,17 @@
-const licenseObject = {
-    BSD: `BSD 2-Clause License
 
-Copyright (c) ${answers.year}, ${answers.name}
+const moment = require('moment');
+const year = moment().format('yyyy');
+
+
+
+
+module.exports = {   
+    licenseTextReturner: function(answers) {
+
+        const licenseObject = {
+            BSD: `BSD 2-Clause License
+
+Copyright (c) ${year}, ${answers.name}
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -26,7 +36,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`,
     MIT: `MIT License
 
-Copyright (c) ${answers.year} ${answers.name}
+Copyright (c) ${year} ${answers.name}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -45,7 +55,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`,
-    Apache: `Copyright ${year} ${name}
+    Apache: `Copyright ${year} ${answers.name}
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -58,6 +68,8 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.`
-}
-const licenseType = answers.license;
-return licenseObject.licenseType;
+        }
+        
+        return licenseObject[`${answers.license}`];
+    }
+};

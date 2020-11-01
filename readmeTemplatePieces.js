@@ -21,7 +21,6 @@ module.exports = {
                 licenseBadgeSection ="[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
                 break;
         };
-
         if (answers.needDeployedLink || answers.needRepoLink) {
             var linksSection = `
 ## Links 
@@ -77,12 +76,12 @@ ${answers.usage}
 
 ## License
 
-${answer.license}
+${answers.license}
 
 
 ## Contributors
 
-${answer.contributors}`;
+${answers.contributors}`;
 
         let resultTOSend = titleSection+licenseBadgeSection;
         if (answers.needRepoLink || answers.needDeployedLink) {

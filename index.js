@@ -59,7 +59,7 @@ const promptQuestions = [
         message: "What can your project be used for?"
     },
     {
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "What license does your project use?",
         choices: [
@@ -74,6 +74,12 @@ const promptQuestions = [
         name: "needLicenseCreated",
         message: "Would you like a License.txt file added to your project along with the README?",
         when: (answers) => answers.license != "none"
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "Please enter the full name of the person the license will belong to",
+        when: (answers) => answers.needLicenseCreated === true
     },
     {
         type: "input",
@@ -95,12 +101,12 @@ inq.prompt(promptQuestions).then((answers) => {
         }
     });
     if(answers.needLicenseCreated){
-        fs.writeFile("LICENSE.text", licenseObject(answers), (err) =>{
+        fs.writeFile("LICENSE.text", licenseContent.licenseTextReturner(answers), (err) =>{
             if(err){
                 console.log(err);
             }
             else{
-                "LICENSE.txt was successfully created"
+                console.log("LICENSE.txt was successfully created")
             }
         })
     }
