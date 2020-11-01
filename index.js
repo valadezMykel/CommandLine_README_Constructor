@@ -1,4 +1,5 @@
-const readmeTemplatePieces = require("./readmeTemplatePieces")
+const readmeTemplatePieces = require("./readmeTemplatePieces");
+const licenseContent = require("./licenseContentObject");
 const inq = require("inquirer");
 const fs = require("fs");
 
@@ -93,4 +94,14 @@ inq.prompt(promptQuestions).then((answers) => {
             console.log("README creation success")
         }
     });
+    if(answers.needLicenseCreated){
+        fs.writeFile("LICENSE.text", licenseObject(answers), (err) =>{
+            if(err){
+                console.log(err);
+            }
+            else{
+                "LICENSE.txt was successfully created"
+            }
+        })
+    }
 });
