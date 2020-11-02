@@ -47,6 +47,7 @@ For a link to the deployed project click [here](${answers.deployedLink})
 * [Usage](#usage)
 * [License](#license)
 * [Contributors](#contributors)
+* [Questions](#questions)
 
 `;
         let visuals = "";
@@ -81,7 +82,12 @@ ${answers.license}
 
 ## Contributors
 
-${answers.contributors}`;
+${answers.contributions}
+
+
+## Questions
+
+If you have questions reach out by email at ${answers.contactEmail}`;
 
         let resultTOSend = titleSection+licenseBadgeSection;
         if (answers.needRepoLink || answers.needDeployedLink) {

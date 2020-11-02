@@ -86,6 +86,11 @@ const promptQuestions = [
         name: "contributions",
         message: "who has contributed to your project?"
     },
+    {
+        type: "input",
+        name: "contactEmail",
+        message: "Input an email address that users can contact if they have questions"
+    }
 ]
 
 
