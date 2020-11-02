@@ -1,5 +1,5 @@
-const readmeTemplatePieces = require("./readmeTemplatePieces");
-const licenseContent = require("./licenseContentObject");
+const readmeTemplatePieces = require("./assests/javaScript/readmeTemplatePieces");
+const licenseContent = require("./assests/javaScript/licenseContentObject");
 const inq = require("inquirer");
 const fs = require("fs");
 
