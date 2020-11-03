@@ -4,7 +4,7 @@ module.exports = {
 
         const titleSection = `
 # ${answers.title}
-<br />
+
 `;
         let licenseBadgeSection;
         switch(answers.license){
