@@ -23,6 +23,7 @@ module.exports = {
         };
         if (answers.needDeployedLink || answers.needRepoLink) {
             var linksSection = `
+
 ## Links 
 
 `;
