@@ -18,7 +18,7 @@ For the Repository link click [here](https://github.com/valadezMykel/CommandLine
 * [Contributors](#contributors)
 * [Questions](#questions)
 
-[![Instructional Video](https://youtu.be/m8gSvJ9lvxE)
+[![Instructional Video](https://i9.ytimg.com/vi/m8gSvJ9lvxE/mq2.jpg?sqp=CNDPkf0F&rs=AOn4CLD35n00G2ZretyNhXJq2OyITCGiJQ)](https://youtu.be/m8gSvJ9lvxE)
 
 
 ## About the Project
